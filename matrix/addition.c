@@ -1,24 +1,39 @@
-#include<stdio.h>
-#include<conio.h>
-main()
+#include <stdio.h>
+
+int main()
 {
-	int a[3][3],b[3][3],c[3][3],row,coloumn;
+	int a[3][3], b[3][3], c[3][3], row, column;
+
 	printf("Enter 9 numbers for 1st matrix:\n");
-	for(row=0;row<=2;row++)
-	for(coloumn=0;coloumn<=2;coloumn++)
-	scanf("%d",&a[row][coloumn]);
+
+	for (row = 0; row <= 2; row++)
+	{
+		for (column = 0; column <= 2; column++)
+		{
+			scanf("%d", &a[row][column]);
+		}
+	}
+
 	printf("Enter 9 numbers for 2 matrix:\n");
-	for(row=0;row<=2;row++)
-	for(coloumn=0;coloumn<=2;coloumn++)
-	scanf("%d",&b[row][coloumn]);
-	for(row=0;row<=2;row++)
+
+	for (row = 0; row <= 2; row++)
 	{
-	for(coloumn=0;coloumn<=2;coloumn++)
+		for (column = 0; column <= 2; column++)
+		{
+			scanf("%d", &b[row][column]);
+		}
+	}
+
+	for (row = 0; row <= 2; row++)
 	{
-	c[row][coloumn]=a[row][coloumn]+b[row][coloumn];
-	printf("%d",c[row][coloumn]);
+		for (column = 0; column <= 2; column++)
+		{
+			c[row][column] = a[row][column] + b[row][column];
+			printf("%d ", c[row][column]);
+		}
+
+		printf("\n");
 	}
-	printf("\n");
-	}
-	getch();
+
+	return 0;
 }
